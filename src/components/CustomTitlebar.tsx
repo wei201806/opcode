@@ -148,6 +148,7 @@ export const CustomTitlebar: React.FC<CustomTitlebarProps> = ({
                 className="p-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors tauri-no-drag"
               >
                 <Bot size={16} />
+                <span className="sr-only">Agents</span>
               </motion.button>
             </TooltipSimple>
           )}
@@ -161,6 +162,7 @@ export const CustomTitlebar: React.FC<CustomTitlebarProps> = ({
                 className="p-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors tauri-no-drag"
               >
                 <BarChart3 size={16} />
+                <span className="sr-only">Usage Dashboard</span>
               </motion.button>
             </TooltipSimple>
           )}
@@ -180,6 +182,7 @@ export const CustomTitlebar: React.FC<CustomTitlebarProps> = ({
                 className="p-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors tauri-no-drag"
               >
                 <Settings size={16} />
+                <span className="sr-only">Settings</span>
               </motion.button>
             </TooltipSimple>
           )}
@@ -194,6 +197,7 @@ export const CustomTitlebar: React.FC<CustomTitlebarProps> = ({
                 className="p-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors flex items-center gap-1"
               >
                 <MoreVertical size={16} />
+                <span className="sr-only">More options</span>
               </motion.button>
             </TooltipSimple>
 
