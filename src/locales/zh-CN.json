@@ -173,74 +173,12 @@
     }
   },
   "agents": {
-    "title": "CC 代理",
-    "description": "管理您的 Claude Code 代理",
+    "heading": "代理",
+    "description": "管理您的 CC 代理",
+    "createAgent": "创建代理",
     "import": "导入",
-    "importFromFile": "从文件",
-    "importFromGithub": "从 GitHub",
-    "createAgent": "创建 CC 代理",
-    "errorLoad": "加载代理失败",
-    "noAgentsTitle": "暂无代理",
-    "noAgentsDescription": "创建您的第一个 CC 代理以开始使用",
-    "created": "创建时间：{{date}}",
-    "execute": "执行",
-    "executeTitle": "执行代理",
-    "edit": "编辑",
-    "editTitle": "编辑代理",
-    "export": "导出",
-    "exportTitle": "导出代理到 .opcode.json",
     "delete": "删除",
-    "deleteTitle": "删除代理",
-    "deleteAgentButton": "删除代理",
-    "recentExecutions": "最近执行",
-    "deleteSuccess": "代理删除成功",
-    "deleteError": "删除代理失败",
-    "createSuccess": "代理创建成功",
-    "updateSuccess": "代理更新成功",
-    "exportSuccess": "代理 \"{{name}}\" 导出成功",
-    "exportError": "导出代理失败",
-    "importSuccess": "代理导入成功",
-    "importError": "导入代理失败",
-    "importGithubSuccess": "从 GitHub 导入代理成功",
-    "deleting": "删除中...",
-    "pagination": {
-      "previous": "上一页",
-      "next": "下一页",
-      "pageOf": "第 {{current}} 页，共 {{total}} 页"
-    },
-    "deleteDialog": {
-      "title": "删除代理",
-      "description": "确定要删除代理 \"{{name}}\" 吗？此操作无法撤消，将永久删除该代理及其所有关联数据。"
-    },
-    "create": {
-      "title": "创建新代理",
-      "editTitle": "编辑代理",
-      "description": "配置新的 Claude Code 代理",
-      "editDescription": "更新您的 Claude Code 代理配置",
-      "backTitle": "返回代理列表",
-      "saving": "保存中...",
-      "saveAgent": "保存代理",
-      "basicInfo": "基本信息",
-      "agentName": "代理名称",
-      "agentNamePlaceholder": "例如：代码助手",
-      "agentIcon": "代理图标",
-      "model": "模型",
-      "modelSonnet": "Claude 4 Sonnet",
-      "modelSonnetDesc": "更快，适用于大多数任务",
-      "modelOpus": "Claude 4 Opus",
-      "modelOpusDesc": "能力更强，适合复杂任务",
-      "configuration": "配置",
-      "defaultTask": "默认任务（可选）",
-      "defaultTaskPlaceholder": "例如：审查此代码的安全问题",
-      "defaultTaskDescription": "这将作为执行代理时的默认任务占位符",
-      "systemPrompt": "系统提示词",
-      "systemPromptDescription": "定义您的 Claude Code 代理的行为和能力",
-      "nameRequired": "代理名称为必填项",
-      "promptRequired": "系统提示词为必填项",
-      "updateError": "更新代理失败",
-      "createError": "创建代理失败",
-      "unsavedChanges": "您有未保存的更改。确定要离开吗？"
-    }
+    "execute": "执行"
   },
   "usage": {
     "title": "使用情况",
@@ -460,5 +398,22 @@
     "duration": "持续时间：",
     "turns": "轮次：",
     "totalTokens": "总令牌："
+  },
+  "agentRunOutputViewer": {
+    "output": "输出",
+    "copyOutput": "复制输出",
+    "noOutput": "��输出",
+    "loading": "加载中",
+    "error": "错误"
+  },
+  "slashCommandPicker": {
+    "slashCommands": "斜杠命令",
+    "search": "搜索",
+    "noCommands": "未找到命令"
+  },
+  "executionControlBar": {
+    "execute": "执行",
+    "stop": "停止",
+    "copy": "复制"
   }
 }
