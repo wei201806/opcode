@@ -1,0 +1,377 @@
+{
+  "brand": {
+    "name": "opcode"
+  },
+  "common": {
+    "cancel": "取消",
+    "next": "下一页",
+    "previous": "上一页",
+    "tryAgain": "重试",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "import": "导入",
+    "export": "导出",
+    "pageOfTotal": "第 {{current}} 页，共 {{total}} 页",
+    "showing": "显示 {{start}}-{{end}}，共 {{total}} 项",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功"
+  },
+  "titlebar": {
+    "close": "关闭",
+    "minimize": "最小化",
+    "maximize": "最大化",
+    "agents": "代理",
+    "usageDashboard": "使用情况",
+    "settings": "设置",
+    "moreOptions": "更多选项",
+    "claudeMd": "CLAUDE.md",
+    "mcpServers": "MCP 服务器",
+    "about": "关于"
+  },
+  "projects": {
+    "title": "项目",
+    "description": "选择一个项目以开始使用 Claude Code",
+    "openProject": "打开项目",
+    "recentProjects": "最近项目",
+    "viewAll": "查看全部 ({{count}})",
+    "viewLess": "收起",
+    "noRecentTitle": "暂无最近项目",
+    "noRecentDescription": "打开一个项目以开始使用 Claude Code",
+    "openFirstProject": "打开您的第一个项目"
+  },
+  "sessions": {
+    "sessionOn": "{{date}} 的会话",
+    "todoBadge": "待办",
+    "noMessages": "暂无消息",
+    "sessionsCount": "{{count}} 个会话"
+  },
+  "settings": {
+    "title": "设置",
+    "description": "配置 Claude Code 首选项",
+    "saving": "保存中...",
+    "saveSettings": "保存设置",
+    "errorLoadSettings": "加载设置失败。请确保 ~/.claude 目录存在。",
+    "successSaved": "设置保存成功！",
+    "errorSaved": "保存设置失败",
+    "tabs": {
+      "general": "通用",
+      "permissions": "权限",
+      "environment": "环境变量",
+      "advanced": "高级",
+      "hooks": "钩子",
+      "commands": "命令",
+      "storage": "存储",
+      "proxy": "代理"
+    },
+    "general": {
+      "heading": "通用设置",
+      "theme": {
+        "label": "主题",
+        "description": "选择您偏好的颜色主题",
+        "dark": "暗色",
+        "gray": "灰色",
+        "light": "亮色",
+        "custom": "自定义"
+      },
+      "customTheme": {
+        "heading": "自定义主题颜色",
+        "background": "背景",
+        "foreground": "前景",
+        "primary": "主色",
+        "card": "卡片",
+        "accent": "强调色",
+        "destructive": "警告色",
+        "description": "使用 CSS 颜色值（hex、rgb、oklch 等）。更改立即生效。"
+      },
+      "coauthored": {
+        "label": "包含 \"由 Claude 共同编写\"",
+        "description": "在 git 提交和拉取请求中添加 Claude 署名"
+      },
+      "verbose": {
+        "label": "详细输出",
+        "description": "显示完整的 bash 和命令输出"
+      },
+      "cleanup": {
+        "label": "聊天记录保留天数",
+        "description": "本地保留聊天记录的时长（默认：30 天）"
+      },
+      "changesPending": "保存设置时将应用更改。",
+      "analytics": {
+        "label": "启用分析",
+        "description": "通过共享匿名使用数据帮助改进 opcode",
+        "enabled": "分析已启用",
+        "disabled": "分析已禁用",
+        "privacyHeading": "您的隐私受到保护",
+        "privacy1": "不收集个人信息或文件内容",
+        "privacy2": "所有数据都是匿名的，使用随机 ID",
+        "privacy3": "您可以随时禁用分析"
+      },
+      "tabPersistence": {
+        "label": "记住打开的标签页",
+        "description": "重启应用时恢复您的标签页",
+        "enabled": "标签页持久化已启用 - 重启时将恢复您的标签页",
+        "disabled": "标签页持久化已禁用 - 标签页不会被保存"
+      },
+      "startupIntro": {
+        "label": "启动时显示欢迎动画",
+        "description": "应用启动时显示简短的欢迎动画",
+        "enabled": "欢迎动画已启用",
+        "disabled": "欢迎动画已禁用",
+        "error": "更新偏好设置失败"
+      },
+      "language": {
+        "label": "语言",
+        "description": "选择您偏好的语言"
+      }
+    },
+    "permissions": {
+      "heading": "权限规则",
+      "description": "控制 Claude Code 可以在无需手动批准的情况下使用哪些工具",
+      "allowRules": "允许规则",
+      "addRule": "添加规则",
+      "noAllowRules": "未配置允许规则。Claude 将请求所有工具的批准。",
+      "denyRules": "拒绝规则",
+      "noDenyRules": "未配置拒绝规则。",
+      "examples": "示例：",
+      "example1": "Bash - 允许所有 bash 命令",
+      "example2": "Bash(npm run build) - 允许精确命令",
+      "example3": "Bash(npm run test:*) - 允许带前缀的命令",
+      "example4": "Read(~/.zshrc) - 允许读取特定文件",
+      "example5": "Edit(docs/**) - 允许编辑 docs 目录中的文件"
+    },
+    "environment": {
+      "heading": "环境变量",
+      "description": "应用于每个 Claude Code 会话的环境变量",
+      "addVariable": "添加变量",
+      "noVariables": "未配置环境变量。",
+      "keyPlaceholder": "键",
+      "valuePlaceholder": "值",
+      "commonVariables": "常用变量：",
+      "example1": "CLAUDE_CODE_ENABLE_TELEMETRY - 启用/禁用遥测（0 或 1）",
+      "example2": "ANTHROPIC_MODEL - 自定义模型名称",
+      "example3": "DISABLE_COST_WARNINGS - 禁用费用警告（1）"
+    },
+    "advanced": {
+      "heading": "高级设置",
+      "description": "面向高级用户的额外配置选项",
+      "apiKeyHelper": {
+        "label": "API 密钥辅助脚本",
+        "description": "用于为 API 请求生成身份验证值的自定义脚本"
+      },
+      "rawJson": {
+        "label": "原始设置（JSON）",
+        "description": "显示将保存到 ~/.claude/settings.json 的原始 JSON"
+      }
+    },
+    "hooks": {
+      "heading": "用户钩子",
+      "description1": "配置适用于您用户账户所有 Claude Code 会话的钩子。",
+      "description2": "这些钩子存储在"
+    }
+  },
+  "agents": {
+    "title": "CC 代理",
+    "description": "管理您的 Claude Code 代理",
+    "import": "导入",
+    "importFromFile": "从文件",
+    "importFromGithub": "从 GitHub",
+    "createAgent": "创建 CC 代理",
+    "errorLoad": "加载代理失败",
+    "noAgentsTitle": "暂无代理",
+    "noAgentsDescription": "创建您的第一个 CC 代理以开始使用",
+    "created": "创建时间：{{date}}",
+    "execute": "执行",
+    "executeTitle": "执行代理",
+    "edit": "编辑",
+    "editTitle": "编辑代理",
+    "export": "导出",
+    "exportTitle": "导出代理到 .opcode.json",
+    "delete": "删除",
+    "deleteTitle": "删除代理",
+    "deleteAgentButton": "删除代理",
+    "recentExecutions": "最近执行",
+    "deleteSuccess": "代理删除成功",
+    "deleteError": "删除代理失败",
+    "createSuccess": "代理创建成功",
+    "updateSuccess": "代理更新成功",
+    "exportSuccess": "代理 \"{{name}}\" 导出成功",
+    "exportError": "导出代理失败",
+    "importSuccess": "代理导入成功",
+    "importError": "导入代理失败",
+    "importGithubSuccess": "从 GitHub 导入代理成功",
+    "deleting": "删除中...",
+    "pagination": {
+      "previous": "上一页",
+      "next": "下一页",
+      "pageOf": "第 {{current}} 页，共 {{total}} 页"
+    },
+    "deleteDialog": {
+      "title": "删除代理",
+      "description": "确定要删除代理 \"{{name}}\" 吗？此操作无法撤消，将永久删除该代理及其所有关联数据。"
+    },
+    "create": {
+      "title": "创建新代理",
+      "editTitle": "编辑代理",
+      "description": "配置新的 Claude Code 代理",
+      "editDescription": "更新您的 Claude Code 代理配置",
+      "backTitle": "返回代理列表",
+      "saving": "保存中...",
+      "saveAgent": "保存代理",
+      "basicInfo": "基本信息",
+      "agentName": "代理名称",
+      "agentNamePlaceholder": "例如：代码助手",
+      "agentIcon": "代理图标",
+      "model": "模型",
+      "modelSonnet": "Claude 4 Sonnet",
+      "modelSonnetDesc": "更快，适用于大多数任务",
+      "modelOpus": "Claude 4 Opus",
+      "modelOpusDesc": "能力更强，适合复杂任务",
+      "configuration": "配置",
+      "defaultTask": "默认任务（可选）",
+      "defaultTaskPlaceholder": "例如：审查此代码的安全问题",
+      "defaultTaskDescription": "这将作为执行代理时的默认任务占位符",
+      "systemPrompt": "系统提示词",
+      "systemPromptDescription": "定义您的 Claude Code 代理的行为和能力",
+      "nameRequired": "代理名称为必填项",
+      "promptRequired": "系统提示词为必填项",
+      "updateError": "更新代理失败",
+      "createError": "创建代理失败",
+      "unsavedChanges": "您有未保存的更改。确定要离开吗？"
+    }
+  },
+  "usage": {
+    "title": "使用情况",
+    "description": "跟踪您的 Claude Code 使用情况和费用",
+    "filters": {
+      "allTime": "全部时间",
+      "last7Days": "最近 7 天",
+      "last30Days": "最近 30 天"
+    },
+    "errorLoad": "加载使用统计失败。请重试。",
+    "cards": {
+      "totalCost": "总费用",
+      "totalSessions": "总会话数",
+      "totalTokens": "总令牌数",
+      "avgCostPerSession": "平均每会话费用"
+    },
+    "tabs": {
+      "overview": "概览",
+      "byModel": "按模型",
+      "byProject": "按项目",
+      "bySession": "按会话",
+      "timeline": "时间线"
+    },
+    "overview": {
+      "tokenBreakdown": "令牌分布",
+      "inputTokens": "输入令牌",
+      "outputTokens": "输出令牌",
+      "cacheWrite": "缓存写入",
+      "cacheRead": "缓存读取",
+      "mostUsedModels": "最常用模型",
+      "topProjects": "热门项目"
+    },
+    "models": {
+      "heading": "按模型使用情况",
+      "input": "输入：",
+      "output": "输出：",
+      "cacheWrite": "缓存写：",
+      "cacheRead": "缓存读："
+    },
+    "projects": {
+      "heading": "按项目使用情况",
+      "totalCount": "共 {{count}} 个项目"
+    },
+    "sessions": {
+      "heading": "按会话使用情况",
+      "totalCount": "共 {{count}} 个会话",
+      "noData": "所选时间段内没有可用的会话数据"
+    },
+    "timeline": {
+      "heading": "每日使用情况",
+      "cost": "费用：{{amount}}",
+      "modelsUsed": "{{count}} 个模型{{s}}",
+      "chartLabel": "每日使用情况时间线",
+      "noData": "所选时间段内没有可用的使用数据"
+    },
+    "tokensCount": "{{count}} 个令牌",
+    "perSession": "/会话"
+  },
+  "mcp": {
+    "title": "MCP 服务器",
+    "description": "管理模型上下文协议服务器",
+    "errorLoad": "加载 MCP 服务器失败。请确保已安装 Claude Code。",
+    "tabs": {
+      "servers": "服务器",
+      "addServer": "添加服务器",
+      "importExport": "导入/导出"
+    },
+    "serverAddSuccess": "MCP 服务器添加成功！",
+    "serverRemoveSuccess": "服务器 \"{{name}}\" 删除成功！",
+    "importSuccess": "成功导入 {{count}} 个服务器{{s}}！",
+    "importPartialSuccess": "已导入 {{imported}} 个服务器，{{failed}} 个失败"
+  },
+  "agentExecution": {
+    "back": "返回",
+    "status": {
+      "running": "运行中",
+      "complete": "已完成",
+      "ready": "就绪"
+    },
+    "fullscreen": "全屏",
+    "modelSelection": "模型选择",
+    "sonnet": "Claude 4 Sonnet",
+    "sonnetDesc": "更快，高效",
+    "opus": "Claude 4 Opus",
+    "opusDesc": "能力更强",
+    "taskDescription": "任务描述",
+    "configureHooks": "配置钩子",
+    "taskPlaceholder": "您希望代理做什么？",
+    "stop": "停止",
+    "execute": "执行",
+    "workingIn": "工作目录：",
+    "readyToExecute": "准备执行",
+    "enterTask": "输入任务以运行代理",
+    "initializing": "初始化代理中...",
+    "output": "输出",
+    "copyOutput": "复制输出",
+    "copyAsJsonl": "复制为 JSONL",
+    "copyAsMarkdown": "复制为 Markdown",
+    "close": "关闭",
+    "hooksDialog": {
+      "title": "配置钩子",
+      "description": "配置在工具执行前、中、后运行的钩子",
+      "projectTab": "项目设置",
+      "localTab": "本地设置",
+      "projectDescription": "项目钩子存储在 <code>.claude/settings.json</code> 中，并提交到版本控制，允许团队成员共享配置。",
+      "localDescription": "本地钩子存储在 <code>.claude/settings.local.json</code> 中，不提交到版本控制，非常适合个人偏好设置。"
+    },
+    "confirmLeave": "代理正在运行中。如果您离开，代理将继续在后台运行。您可以在 CC 代理的 \"运行中的会话\" 选项卡中查看运行中的会话。\n\n您要继续吗？",
+    "markdownExport": {
+      "heading": "代理执行：",
+      "task": "任务：",
+      "model": "模型：",
+      "date": "日期：",
+      "systemInit": "系统初始化",
+      "sessionId": "会话 ID：",
+      "modelLabel": "模型：",
+      "workingDir": "工作目录：",
+      "tools": "工具：",
+      "assistant": "助手",
+      "tool": "工具：",
+      "tokens": "令牌：",
+      "tokensFormat": "输入 {{input}}，输出 {{output}}",
+      "user": "用户",
+      "toolResult": "工具结果",
+      "executionResult": "执行结果",
+      "error": "错误：",
+      "cost": "费用：",
+      "duration": "耗时：",
+      "turns": "轮次：",
+      "totalTokens": "总令牌数：",
+      "totalTokensFormat": "{{total}}（输入 {{input}}，输出 {{output}}）"
+    }
+  }
+}
