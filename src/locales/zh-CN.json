@@ -373,5 +373,34 @@
       "totalTokens": "总令牌数：",
       "totalTokensFormat": "{{total}}（输入 {{input}}，输出 {{output}}）"
     }
+  },
+  "errorBoundary": {
+    "somethingWentWrong": "出错了",
+    "errorOccurred": "呈现此组件时出现错误",
+    "errorDetails": "错误详情",
+    "tryAgain": "重试"
+  },
+  "topbar": {
+    "checking": "检查中...",
+    "claudeCode": "Claude Code",
+    "claudeCodeNotFound": "未找到 Claude Code",
+    "failedToCheckVersion": "检查版本失败",
+    "selectInstallation": "选择 Claude 安装路径",
+    "installClaudeCode": "安装 Claude Code",
+    "version": "v{{version}}"
+  },
+  "sessionComponent": {
+    "loading": "加载中...",
+    "error": "错误",
+    "errorOccurred": "发生错误",
+    "failedToLoad": "加载失败",
+    "checkingStatus": "检查状态中...",
+    "running": "运行中",
+    "completed": "已完成",
+    "stopped": "已停止",
+    "noProjectPath": "未选择项目路径",
+    "selectProject": "请选择项目路径",
+    "sendMessage": "发送消息",
+    "typeMessage": "输入消息..."
   }
 }
