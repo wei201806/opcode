@@ -882,6 +882,7 @@ const FloatingPromptInputInner = (
                       className="h-8 w-8"
                     >
                       <Minimize2 className="h-4 w-4" />
+                      <span className="sr-only">Minimize</span>
                     </Button>
                   </motion.div>
                 </TooltipSimple>
@@ -1260,6 +1261,7 @@ const FloatingPromptInputInner = (
                         className="h-8 w-8 hover:bg-accent/50 transition-colors"
                       >
                         <Maximize2 className="h-3.5 w-3.5" />
+                        <span className="sr-only">Expand</span>
                       </Button>
                     </motion.div>
                   </TooltipSimple>
@@ -1280,9 +1282,15 @@ const FloatingPromptInputInner = (
                         )}
                       >
                         {isLoading ? (
-                          <Square className="h-4 w-4" />
+                          <>
+                            <Square className="h-4 w-4" />
+                            <span className="sr-only">Stop generation</span>
+                          </>
                         ) : (
-                          <Send className="h-4 w-4" />
+                          <>
+                            <Send className="h-4 w-4" />
+                            <span className="sr-only">Send message</span>
+                          </>
                         )}
                       </Button>
                     </motion.div>

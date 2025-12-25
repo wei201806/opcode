@@ -383,6 +383,7 @@ export const FilePicker: React.FC<FilePickerProps> = ({
               className="h-8 w-8"
             >
               <ArrowLeft className="h-4 w-4" />
+              <span className="sr-only">Navigate up</span>
             </Button>
             <span className="text-sm font-mono text-muted-foreground truncate max-w-[300px]">
               {relativePath}
@@ -395,6 +396,7 @@ export const FilePicker: React.FC<FilePickerProps> = ({
             className="h-8 w-8"
           >
             <X className="h-4 w-4" />
+            <span className="sr-only">Close</span>
           </Button>
         </div>
       </div>

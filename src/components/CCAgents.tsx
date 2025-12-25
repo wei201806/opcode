@@ -308,6 +308,7 @@ export const CCAgents: React.FC<CCAgentsProps> = ({ onBack, className }) => {
                 className="h-8 w-8"
               >
                 <ArrowLeft className="h-4 w-4" />
+                <span className="sr-only">Back</span>
               </Button>
               <div>
                 <h1 className="text-heading-1">{t('agents.title')}</h1>

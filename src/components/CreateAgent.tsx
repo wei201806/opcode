@@ -142,6 +142,7 @@ export const CreateAgent: React.FC<CreateAgentProps> = ({
                   title={t('agents.create.backTitle')}
                 >
                   <ArrowLeft className="h-4 w-4" />
+                  <span className="sr-only">Back to Agents</span>
                 </Button>
               </motion.div>
               <div>

@@ -1390,7 +1390,17 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                         transition={{ duration: 0.15 }}
                       >
                         <Button variant="ghost" size="icon" onClick={() => setQueuedPromptsCollapsed(prev => !prev)}>
-                          {queuedPromptsCollapsed ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+                          {queuedPromptsCollapsed ? (
+                            <>
+                              <ChevronUp className="h-3 w-3" />
+                              <span className="sr-only">Expand queue</span>
+                            </>
+                          ) : (
+                            <>
+                              <ChevronDown className="h-3 w-3" />
+                              <span className="sr-only">Collapse queue</span>
+                            </>
+                          )}
                         </Button>
                       </motion.div>
                     </TooltipSimple>
@@ -1424,6 +1434,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                           onClick={() => setQueuedPrompts(prev => prev.filter(p => p.id !== queuedPrompt.id))}
                         >
                           <X className="h-3 w-3" />
+                          <span className="sr-only">Remove from queue</span>
                         </Button>
                       </motion.div>
                     </motion.div>
@@ -1459,7 +1470,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                           top: 0,
                           behavior: 'smooth'
                         });
-                        
+
                         // After smooth scroll completes, trigger a small scroll to ensure rendering
                         setTimeout(() => {
                           if (parentRef.current) {
@@ -1477,6 +1488,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                       className="px-3 py-2 hover:bg-accent rounded-none"
                     >
                       <ChevronUp className="h-4 w-4" />
+                      <span className="sr-only">Scroll to top</span>
                     </Button>
                   </motion.div>
                 </TooltipSimple>
@@ -1510,6 +1522,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                       className="px-3 py-2 hover:bg-accent rounded-none"
                     >
                       <ChevronDown className="h-4 w-4" />
+                      <span className="sr-only">Scroll to bottom</span>
                     </Button>
                   </motion.div>
                 </TooltipSimple>
@@ -1543,6 +1556,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                           className="h-9 w-9 text-muted-foreground hover:text-foreground"
                         >
                           <GitBranch className={cn("h-3.5 w-3.5", showTimeline && "text-primary")} />
+                          <span className="sr-only">Session Timeline</span>
                         </Button>
                       </motion.div>
                     </TooltipSimple>
@@ -1561,6 +1575,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                               className="h-9 w-9 text-muted-foreground hover:text-foreground"
                             >
                               <Copy className="h-3.5 w-3.5" />
+                              <span className="sr-only">Copy conversation</span>
                             </Button>
                           </motion.div>
                         </TooltipSimple>
@@ -1603,6 +1618,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                         className="h-8 w-8 text-muted-foreground hover:text-foreground"
                       >
                         <Wrench className={cn("h-3.5 w-3.5", showSettings && "text-primary")} />
+                        <span className="sr-only">Checkpoint Settings</span>
                       </Button>
                     </motion.div>
                   </TooltipSimple>
@@ -1655,6 +1671,7 @@ export const ClaudeCodeSession: React.FC<ClaudeCodeSessionProps> = ({
                     className="h-8 w-8"
                   >
                     <X className="h-4 w-4" />
+                    <span className="sr-only">Close timeline</span>
                   </Button>
                 </div>
                 
