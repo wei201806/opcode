@@ -7,7 +7,6 @@ import {
   X, 
   Folder, 
   File, 
-  const { t } = useTranslation();
   ArrowLeft,
   FileCode,
   FileText,
